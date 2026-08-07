@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Koi Companion</title>
+  <meta name="description" content="Request invitation-only access to test Koi Companion on Android, iPhone or iPad." />
+  <title>Koi Companion test access</title>
   <style>
     :root {
       --bg: #eefafa;
@@ -11,8 +12,11 @@
       --text: #062f3a;
       --muted: #5f7480;
       --primary: #008c82;
+      --primary-dark: #006f68;
       --border: rgba(6, 47, 58, 0.14);
       --soft: rgba(0, 140, 130, 0.1);
+      --warning: #fff7df;
+      --warning-border: #e5c661;
     }
 
     * {
@@ -38,7 +42,7 @@
 
     .page {
       width: 100%;
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 14px 0 32px;
     }
@@ -52,11 +56,22 @@
       font-weight: 800;
     }
 
-    nav a {
+    nav a,
+    footer a {
       color: var(--text);
       text-decoration: none;
+    }
+
+    nav a {
       font-size: 15px;
       padding: 6px 0;
+    }
+
+    nav a:hover,
+    nav a:focus-visible,
+    footer a:hover,
+    footer a:focus-visible {
+      text-decoration: underline;
     }
 
     .hero {
@@ -73,7 +88,7 @@
       align-items: center;
       gap: 8px;
       background: var(--soft);
-      color: var(--primary);
+      color: var(--primary-dark);
       border-radius: 999px;
       padding: 8px 12px;
       font-weight: 800;
@@ -95,39 +110,85 @@
       line-height: 1.5;
     }
 
-    .actions {
+    .platforms {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 14px;
+    }
+
+    .platform {
+      display: flex;
+      flex-direction: column;
       gap: 10px;
-      margin: 18px 0 6px;
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fbfefe;
+    }
+
+    .platform h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .platform p {
+      flex: 1;
+      margin: 0;
+      font-size: 15px;
     }
 
     .button {
       display: block;
       width: 100%;
       text-align: center;
-      padding: 15px 16px;
-      border-radius: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
       text-decoration: none;
       font-weight: 900;
       font-size: 16px;
-    }
-
-    .primary {
       background: var(--primary);
       color: white;
+      transition: background 0.15s ease, transform 0.15s ease;
     }
 
-    .secondary {
-      background: white;
+    .button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid rgba(0, 140, 130, 0.3);
+      outline-offset: 3px;
+    }
+
+    .support-link {
+      text-align: center;
+      margin: 8px 0 0;
+      font-size: 15px;
+    }
+
+    .support-link a {
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .privacy-note {
+      margin: 14px 0 0;
+      padding: 13px 14px;
+      border: 1px solid var(--warning-border);
+      border-radius: 14px;
+      background: var(--warning);
       color: var(--text);
-      border: 1px solid var(--border);
+      font-size: 15px;
     }
 
     .info {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 16px;
+      padding: 18px;
       margin-top: 14px;
     }
 
@@ -136,12 +197,20 @@
       font-size: 20px;
     }
 
-    .info ul {
+    .info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .info ol {
       margin: 0;
-      padding-left: 20px;
+      padding-left: 22px;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
       font-size: 15px;
+    }
+
+    .info li + li {
+      margin-top: 5px;
     }
 
     footer {
@@ -149,6 +218,12 @@
       font-size: 13px;
       text-align: center;
       padding: 18px 0 8px;
+    }
+
+    @media (max-width: 600px) {
+      .platforms {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 420px) {
@@ -176,47 +251,74 @@
 <body>
   <main class="page">
     <nav aria-label="Main navigation">
-      <a href="/">Home</a>
+      <a href="/" aria-current="page">Home</a>
       <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/terms/">Terms</a>
       <a href="/support/">Support</a>
     </nav>
 
     <section class="hero">
-      <div class="badge">Koi Companion test access</div>
+      <div class="badge">Invitation-only test access</div>
 
       <h1>Koi Companion</h1>
 
       <p>
-        Welcome to Koi Companion. If you are here to join the Android closed test,
-        tap the Google Play button below.
+        Testing is currently free. To become a tester, first send us the account email
+        used on the device you will test with. We must approve that email before you can join.
       </p>
 
-      <div class="actions">
-        <a class="button primary" href="https://play.google.com/apps/testing/uk.co.koicompanion.app">
-          Join Android closed test
-        </a>
-        <a class="button secondary" href="/support/">
-          I need help joining
-        </a>
+      <div class="platforms">
+        <article class="platform">
+          <h2>Android</h2>
+          <p>Privately provide the Google account email used on your Android device.</p>
+          <a class="button" href="mailto:koicompanion@gmail.com?subject=Android%20test%20access%20request%20-%20Koi%20Companion&amp;body=Hello%20Koi%20Companion%2C%0D%0A%0D%0AI%20would%20like%20Android%20closed-test%20access.%0D%0A%0D%0AGoogle%20account%20email%20used%20on%20my%20Android%20device%3A%20%0D%0ADevice%20model%3A%20%0D%0A%0D%0AThank%20you.">
+            Request Android access
+          </a>
+        </article>
+
+        <article class="platform">
+          <h2>iPhone or iPad</h2>
+          <p>Privately provide the Apple Account email used on your iPhone or iPad.</p>
+          <a class="button" href="mailto:koicompanion@gmail.com?subject=iPhone%2FiPad%20test%20access%20request%20-%20Koi%20Companion&amp;body=Hello%20Koi%20Companion%2C%0D%0A%0D%0AI%20would%20like%20iPhone%2FiPad%20test%20access.%0D%0A%0D%0AApple%20Account%20email%20used%20on%20my%20device%3A%20%0D%0ADevice%20model%3A%20%0D%0A%0D%0AThank%20you.">
+            Request Apple access
+          </a>
+        </article>
       </div>
+
+      <p class="privacy-note" role="note">
+        <strong>Keep your email private:</strong> send it only by email or private message.
+        Never post your account email in a public comment.
+      </p>
+
+      <p class="support-link">
+        Having trouble? <a href="/support/">Visit Koi Companion Support</a>.
+      </p>
     </section>
 
     <section class="info">
-      <h2>What happens next?</h2>
-      <ul>
-        <li>Open the test link on your Android phone.</li>
-        <li>Tap Join or Become a tester on Google Play.</li>
-        <li>Install Koi Companion from Google Play.</li>
-        <li>Create or sign in to your account in the app.</li>
-      </ul>
+      <h2>How test access works</h2>
+      <ol>
+        <li>Choose your platform and privately send the matching Google or Apple Account email.</li>
+        <li>We add that exact email to the platform's approved tester list.</li>
+        <li>Once access is enabled, we privately send the correct Google Play or TestFlight link.</li>
+        <li>Open the link while signed in with the approved account, then install Koi Companion.</li>
+      </ol>
+    </section>
+
+    <section class="info">
+      <h2>Testing now and after launch</h2>
+      <p>
+        Testing is currently free. After Koi Companion launches fully, a subscription fee will
+        be required to help cover ongoing operating and development costs. Subscription options
+        and prices are shown in the app's Subscription section.
+      </p>
     </section>
 
     <section class="info">
       <h2>About Koi Companion</h2>
       <p>
         Koi Companion helps koi keepers manage pond records, koi records, water tests,
-        health notes, treatments, reminders, reports and practical Koi Companion support.
+        health notes, treatments, reminders and reports.
       </p>
       <p>
         Koi Companion provides record support and guidance. It is not a veterinary diagnosis service.
@@ -224,7 +326,7 @@
     </section>
 
     <footer>
-      © Koi Companion · info@westcoastaerial.co.uk
+      © 2026 Koi Companion · <a href="mailto:koicompanion@gmail.com">koicompanion@gmail.com</a>
     </footer>
   </main>
 </body>
