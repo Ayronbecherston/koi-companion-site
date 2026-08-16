@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="description" content="Request invitation-only access to test Koi Companion on Android, iPhone or iPad." />
-  <title>Koi Companion test access</title>
+  <meta name="description" content="Use Koi Companion on the web or download it for Android. The iPhone and iPad release is being finalised." />
+  <title>Koi Companion | Web and Android app</title>
   <style>
     :root {
       --bg: #eefafa;
@@ -112,7 +112,7 @@
 
     .platforms {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin: 18px 0 14px;
     }
@@ -161,6 +161,13 @@
     .button:focus-visible {
       outline: 3px solid rgba(0, 140, 130, 0.3);
       outline-offset: 3px;
+    }
+
+    .button[aria-disabled="true"] {
+      background: #c6d7d8;
+      color: #38545c;
+      cursor: default;
+      transform: none;
     }
 
     .support-link {
@@ -258,59 +265,41 @@
     </nav>
 
     <section class="hero">
-      <div class="badge">Invitation-only test access</div>
+      <div class="badge">Available now on web and Android</div>
 
       <h1>Koi Companion</h1>
 
       <p>
-        Testing is currently free. To become a tester, first send us the account email
-        used on the device you will test with. We must approve that email before you can join.
+        Keep pond records, koi records, water tests, health notes, treatments,
+        reminders and reports together in one clear, connected place.
       </p>
 
       <div class="platforms">
         <article class="platform">
+          <h2>Web</h2>
+          <p>Use Koi Companion in your browser on your phone, tablet or computer.</p>
+          <a class="button" href="https://app.koicompanion.app/">
+            Use Koi Companion
+          </a>
+        </article>
+
+        <article class="platform">
           <h2>Android</h2>
-          <p>Privately provide the Google account email used on your Android device.</p>
-          <a class="button" href="mailto:koicompanion@gmail.com?subject=Android%20test%20access%20request%20-%20Koi%20Companion&amp;body=Hello%20Koi%20Companion%2C%0D%0A%0D%0AI%20would%20like%20Android%20closed-test%20access.%0D%0A%0D%0AGoogle%20account%20email%20used%20on%20my%20Android%20device%3A%20%0D%0ADevice%20model%3A%20%0D%0A%0D%0AThank%20you.">
-            Request Android access
+          <p>Download Koi Companion from Google Play and keep your pond information with you.</p>
+          <a class="button" href="https://play.google.com/store/apps/details?id=uk.co.koicompanion.app">
+            Download for Android
           </a>
         </article>
 
         <article class="platform">
           <h2>iPhone or iPad</h2>
-          <p>Privately provide the Apple Account email used on your iPhone or iPad.</p>
-          <a class="button" href="mailto:koicompanion@gmail.com?subject=iPhone%2FiPad%20test%20access%20request%20-%20Koi%20Companion&amp;body=Hello%20Koi%20Companion%2C%0D%0A%0D%0AI%20would%20like%20iPhone%2FiPad%20test%20access.%0D%0A%0D%0AApple%20Account%20email%20used%20on%20my%20device%3A%20%0D%0ADevice%20model%3A%20%0D%0A%0D%0AThank%20you.">
-            Request Apple access
-          </a>
+          <p>The App Store release is being finalised.</p>
+          <span class="button" aria-disabled="true">Coming soon</span>
         </article>
       </div>
 
-      <p class="privacy-note" role="note">
-        <strong>Keep your email private:</strong> send it only by email or private message.
-        Never post your account email in a public comment.
-      </p>
-
       <p class="support-link">
-        Having trouble? <a href="/support/">Visit Koi Companion Support</a>.
-      </p>
-    </section>
-
-    <section class="info">
-      <h2>How test access works</h2>
-      <ol>
-        <li>Choose your platform and privately send the matching Google or Apple Account email.</li>
-        <li>We add that exact email to the platform's approved tester list.</li>
-        <li>Once access is enabled, we privately send the correct Google Play or TestFlight link.</li>
-        <li>Open the link while signed in with the approved account, then install Koi Companion.</li>
-      </ol>
-    </section>
-
-    <section class="info">
-      <h2>Testing now and after launch</h2>
-      <p>
-        Testing is currently free. After Koi Companion launches fully, a subscription fee will
-        be required to help cover ongoing operating and development costs. Subscription options
-        and prices are shown in the app's Subscription section.
+        Need help? <a href="/support/">Visit Koi Companion Support</a>.
       </p>
     </section>
 
