@@ -233,6 +233,12 @@
       }
     }
 
+    @media (hover: none) and (pointer: coarse) {
+      .desktop-only {
+        display: none;
+      }
+    }
+
     @media (max-width: 420px) {
       body {
         padding-left: 10px;
@@ -265,7 +271,7 @@
     </nav>
 
     <section class="hero">
-      <div class="badge">Available now on web and Android</div>
+      <div class="badge">Available now on Android, with iPhone coming soon</div>
 
       <h1>Koi Companion</h1>
 
@@ -276,18 +282,10 @@
 
       <div class="platforms">
         <article class="platform">
-          <h2>Web</h2>
-          <p>Use Koi Companion in your browser on your phone, tablet or computer.</p>
-          <a class="button" href="https://app.koicompanion.app/">
-            Use Koi Companion
-          </a>
-        </article>
-
-        <article class="platform">
           <h2>Android</h2>
-          <p>Download Koi Companion from Google Play and keep your pond information with you.</p>
+          <p>Install Koi Companion from Google Play and keep your pond information with you.</p>
           <a class="button" href="https://play.google.com/store/apps/details?id=uk.co.koicompanion.app">
-            Download for Android
+            Get it on Google Play
           </a>
         </article>
 
@@ -295,6 +293,14 @@
           <h2>iPhone or iPad</h2>
           <p>The App Store release is being finalised.</p>
           <span class="button" aria-disabled="true">Coming soon</span>
+        </article>
+
+        <article class="platform desktop-only">
+          <h2>Computer</h2>
+          <p>Prefer your desktop or laptop? Use Koi Companion in your browser.</p>
+          <a class="button" href="https://app.koicompanion.app/">
+            Open in your browser
+          </a>
         </article>
       </div>
 
