@@ -3,329 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="description" content="Use Koi Companion on the web or download it for Android. The iPhone and iPad release is being finalised." />
-  <title>Koi Companion | Web and Android app</title>
+  <meta name="description" content="Use Koi Companion on the web or download it from the Apple App Store and Google Play." />
+  <title>Koi Companion | iPhone, iPad, Android and web</title>
   <style>
-    :root {
-      --bg: #eefafa;
-      --card: #ffffff;
-      --text: #062f3a;
-      --muted: #5f7480;
-      --primary: #008c82;
-      --primary-dark: #006f68;
-      --border: rgba(6, 47, 58, 0.14);
-      --soft: rgba(0, 140, 130, 0.1);
-      --warning: #fff7df;
-      --warning-border: #e5c661;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      max-width: 100%;
-      min-height: 100%;
-      overflow-x: hidden;
-      -webkit-text-size-adjust: 100%;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    body {
-      padding: env(safe-area-inset-top) 14px env(safe-area-inset-bottom);
-    }
-
-    .page {
-      width: 100%;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 14px 0 32px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin: 6px 0 14px;
-      font-weight: 800;
-    }
-
-    nav a,
-    footer a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    nav a {
-      font-size: 15px;
-      padding: 6px 0;
-    }
-
-    nav a:hover,
-    nav a:focus-visible,
-    footer a:hover,
-    footer a:focus-visible {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: 0 12px 32px rgba(6, 47, 58, 0.06);
-      margin-bottom: 14px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--soft);
-      color: var(--primary-dark);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-weight: 800;
-      font-size: 13px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(32px, 9vw, 52px);
-      line-height: 1.03;
-      letter-spacing: -0.04em;
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.5;
-    }
-
-    .platforms {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin: 18px 0 14px;
-    }
-
-    .platform {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 0;
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: #fbfefe;
-    }
-
-    .platform h2 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .platform p {
-      flex: 1;
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 14px 16px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 900;
-      font-size: 16px;
-      background: var(--primary);
-      color: white;
-      transition: background 0.15s ease, transform 0.15s ease;
-    }
-
-    .button:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-    }
-
-    .button:focus-visible {
-      outline: 3px solid rgba(0, 140, 130, 0.3);
-      outline-offset: 3px;
-    }
-
-    .button[aria-disabled="true"] {
-      background: #c6d7d8;
-      color: #38545c;
-      cursor: default;
-      transform: none;
-    }
-
-    .support-link {
-      text-align: center;
-      margin: 8px 0 0;
-      font-size: 15px;
-    }
-
-    .support-link a {
-      color: var(--primary-dark);
-      font-weight: 800;
-    }
-
-    .privacy-note {
-      margin: 14px 0 0;
-      padding: 13px 14px;
-      border: 1px solid var(--warning-border);
-      border-radius: 14px;
-      background: var(--warning);
-      color: var(--text);
-      font-size: 15px;
-    }
-
-    .info {
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-      margin-top: 14px;
-    }
-
-    .info h2 {
-      margin: 0 0 8px;
-      font-size: 20px;
-    }
-
-    .info p:last-child {
-      margin-bottom: 0;
-    }
-
-    .info ol {
-      margin: 0;
-      padding-left: 22px;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    .info li + li {
-      margin-top: 5px;
-    }
-
-    footer {
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-      padding: 18px 0 8px;
-    }
-
-    @media (max-width: 600px) {
-      .platforms {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-      .desktop-only {
-        display: none;
-      }
-    }
-
-    @media (max-width: 420px) {
-      body {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-
-      .hero {
-        padding: 18px;
-        border-radius: 20px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      .button {
-        font-size: 15px;
-        padding: 14px;
-      }
-    }
+    :root { --bg:#eefafa; --card:#fff; --text:#062f3a; --muted:#5f7480; --primary:#008c82; --primary-dark:#006f68; --border:rgba(6,47,58,.14); --soft:rgba(0,140,130,.1); --warning:#fff7df; --warning-border:#e5c661; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; width:100%; max-width:100%; min-height:100%; overflow-x:hidden; -webkit-text-size-adjust:100%; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; background:var(--bg); color:var(--text); }
+    body { padding:env(safe-area-inset-top) 14px env(safe-area-inset-bottom); }
+    .page { width:100%; max-width:760px; margin:0 auto; padding:14px 0 32px; }
+    nav { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:6px 0 14px; font-weight:800; }
+    nav a,footer a { color:var(--text); text-decoration:none; }
+    nav a { font-size:15px; padding:6px 0; }
+    nav a:hover,nav a:focus-visible,footer a:hover,footer a:focus-visible { text-decoration:underline; }
+    .hero { background:var(--card); border:1px solid var(--border); border-radius:22px; padding:22px; box-shadow:0 12px 32px rgba(6,47,58,.06); margin-bottom:14px; }
+    .badge { display:inline-flex; align-items:center; gap:8px; background:var(--soft); color:var(--primary-dark); border-radius:999px; padding:8px 12px; font-weight:800; font-size:13px; margin-bottom:14px; }
+    h1 { margin:0 0 10px; font-size:clamp(32px,9vw,52px); line-height:1.03; letter-spacing:-.04em; }
+    p { margin:0 0 14px; color:var(--muted); font-size:17px; line-height:1.5; }
+    .platforms { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0 14px; }
+    .platform { display:flex; flex-direction:column; gap:10px; min-width:0; padding:16px; border:1px solid var(--border); border-radius:18px; background:#fbfefe; }
+    .platform h2 { margin:0; font-size:20px; }
+    .platform p { flex:1; margin:0; font-size:15px; }
+    .button { display:block; width:100%; text-align:center; padding:14px 16px; border-radius:14px; text-decoration:none; font-weight:900; font-size:16px; background:var(--primary); color:#fff; transition:background .15s ease,transform .15s ease; }
+    .button:hover { background:var(--primary-dark); transform:translateY(-1px); }
+    .button:focus-visible { outline:3px solid rgba(0,140,130,.3); outline-offset:3px; }
+    .support-link { text-align:center; margin:8px 0 0; font-size:15px; }
+    .support-link a { color:var(--primary-dark); font-weight:800; }
+    .info { background:rgba(255,255,255,.78); border:1px solid var(--border); border-radius:18px; padding:18px; margin-top:14px; }
+    .info h2 { margin:0 0 8px; font-size:20px; }
+    .info p:last-child { margin-bottom:0; }
+    footer { color:var(--muted); font-size:13px; text-align:center; padding:18px 0 8px; }
+    @media (max-width:600px) { .platforms { grid-template-columns:1fr; } }
+    @media (hover:none) and (pointer:coarse) { .desktop-only { display:none; } }
+    @media (max-width:420px) { body { padding-left:10px; padding-right:10px; } .hero { padding:18px; border-radius:20px; } p { font-size:16px; } .button { font-size:15px; padding:14px; } }
   </style>
 </head>
 <body>
   <main class="page">
-    <nav aria-label="Main navigation">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms/">Terms</a>
-      <a href="/support/">Support</a>
-    </nav>
-
+    <nav aria-label="Main navigation"><a href="/" aria-current="page">Home</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a><a href="/support/">Support</a></nav>
     <section class="hero">
-      <div class="badge">Available now on Android, with iPhone coming soon</div>
-
+      <div class="badge">Available now on iPhone, iPad, Android and web</div>
       <h1>Koi Companion</h1>
-
-      <p>
-        Keep pond records, koi records, water tests, health notes, treatments,
-        reminders and reports together in one clear, connected place.
-      </p>
-
+      <p>Keep pond records, koi records, water tests, health notes, treatments, reminders and reports together in one clear, connected place.</p>
       <div class="platforms">
-        <article class="platform">
-          <h2>Android</h2>
-          <p>Install Koi Companion from Google Play and keep your pond information with you.</p>
-          <a class="button" href="https://play.google.com/store/apps/details?id=uk.co.koicompanion.app">
-            Get it on Google Play
-          </a>
-        </article>
-
-        <article class="platform">
-          <h2>iPhone or iPad</h2>
-          <p>
-            The App Store release is being finalised. Until then you can
-            <a href="https://app.koicompanion.app/">use Koi Companion in Safari</a>.
-          </p>
-          <span class="button" aria-disabled="true">Coming soon</span>
-        </article>
-
-        <article class="platform desktop-only">
-          <h2>Computer</h2>
-          <p>Prefer your desktop or laptop? Use Koi Companion in your browser.</p>
-          <a class="button" href="https://app.koicompanion.app/">
-            Open in your browser
-          </a>
-        </article>
+        <article class="platform"><h2>iPhone or iPad</h2><p>Download Koi Companion from the Apple App Store.</p><a class="button" href="https://apps.apple.com/gb/app/koi-companion/id6769457805">Download on the App Store</a></article>
+        <article class="platform"><h2>Android</h2><p>Install Koi Companion from Google Play and keep your pond information with you.</p><a class="button" href="https://play.google.com/store/apps/details?id=uk.co.koicompanion.app">Get it on Google Play</a></article>
+        <article class="platform desktop-only"><h2>Computer</h2><p>Prefer your desktop or laptop? Use Koi Companion in your browser.</p><a class="button" href="https://app.koicompanion.app/">Open in your browser</a></article>
       </div>
-
-      <p class="support-link">
-        Need help? <a href="/support/">Visit Koi Companion Support</a>.
-      </p>
+      <p class="support-link">Need help? <a href="/support/">Visit Koi Companion Support</a>.</p>
     </section>
-
-    <section class="info">
-      <h2>About Koi Companion</h2>
-      <p>
-        Koi Companion helps koi keepers manage pond records, koi records, water tests,
-        health notes, treatments, reminders and reports.
-      </p>
-      <p>
-        Koi Companion provides record support and guidance. It is not a veterinary diagnosis service.
-      </p>
-    </section>
-
-    <footer>
-      © 2026 West Coast Aerial Ltd · Koi Companion · <a href="mailto:koicompanion@gmail.com">koicompanion@gmail.com</a>
-    </footer>
+    <section class="info"><h2>About Koi Companion</h2><p>Koi Companion helps koi keepers manage pond records, koi records, water tests, health notes, treatments, reminders and reports.</p><p>Koi Companion provides record support and guidance. It is not a veterinary diagnosis service.</p></section>
+    <footer>© 2026 West Coast Aerial Ltd · Koi Companion · <a href="mailto:koicompanion@gmail.com">koicompanion@gmail.com</a></footer>
   </main>
 </body>
 </html>
