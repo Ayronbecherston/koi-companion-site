@@ -3,56 +3,158 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="description" content="Use Koi Companion on the web or download it from the Apple App Store and Google Play." />
-  <title>Koi Companion | iPhone, iPad, Android and web</title>
-  <style>
-    :root { --bg:#eefafa; --card:#fff; --text:#062f3a; --muted:#5f7480; --primary:#008c82; --primary-dark:#006f68; --border:rgba(6,47,58,.14); --soft:rgba(0,140,130,.1); --warning:#fff7df; --warning-border:#e5c661; }
-    * { box-sizing:border-box; }
-    html,body { margin:0; width:100%; max-width:100%; min-height:100%; overflow-x:hidden; -webkit-text-size-adjust:100%; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; background:var(--bg); color:var(--text); }
-    body { padding:env(safe-area-inset-top) 14px env(safe-area-inset-bottom); }
-    .page { width:100%; max-width:760px; margin:0 auto; padding:14px 0 32px; }
-    nav { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:6px 0 14px; font-weight:800; }
-    nav a,footer a { color:var(--text); text-decoration:none; }
-    nav a { font-size:15px; padding:6px 0; }
-    nav a:hover,nav a:focus-visible,footer a:hover,footer a:focus-visible { text-decoration:underline; }
-    .hero { background:var(--card); border:1px solid var(--border); border-radius:22px; padding:22px; box-shadow:0 12px 32px rgba(6,47,58,.06); margin-bottom:14px; }
-    .badge { display:inline-flex; align-items:center; gap:8px; background:var(--soft); color:var(--primary-dark); border-radius:999px; padding:8px 12px; font-weight:800; font-size:13px; margin-bottom:14px; }
-    h1 { margin:0 0 10px; font-size:clamp(32px,9vw,52px); line-height:1.03; letter-spacing:-.04em; }
-    p { margin:0 0 14px; color:var(--muted); font-size:17px; line-height:1.5; }
-    .platforms { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0 14px; }
-    .platform { display:flex; flex-direction:column; gap:10px; min-width:0; padding:16px; border:1px solid var(--border); border-radius:18px; background:#fbfefe; }
-    .platform h2 { margin:0; font-size:20px; }
-    .platform p { flex:1; margin:0; font-size:15px; }
-    .button { display:block; width:100%; text-align:center; padding:14px 16px; border-radius:14px; text-decoration:none; font-weight:900; font-size:16px; background:var(--primary); color:#fff; transition:background .15s ease,transform .15s ease; }
-    .button:hover { background:var(--primary-dark); transform:translateY(-1px); }
-    .button:focus-visible { outline:3px solid rgba(0,140,130,.3); outline-offset:3px; }
-    .support-link { text-align:center; margin:8px 0 0; font-size:15px; }
-    .support-link a { color:var(--primary-dark); font-weight:800; }
-    .info { background:rgba(255,255,255,.78); border:1px solid var(--border); border-radius:18px; padding:18px; margin-top:14px; }
-    .info h2 { margin:0 0 8px; font-size:20px; }
-    .info p:last-child { margin-bottom:0; }
-    footer { color:var(--muted); font-size:13px; text-align:center; padding:18px 0 8px; }
-    @media (max-width:600px) { .platforms { grid-template-columns:1fr; } }
-    @media (hover:none) and (pointer:coarse) { .desktop-only { display:none; } }
-    @media (max-width:420px) { body { padding-left:10px; padding-right:10px; } .hero { padding:18px; border-radius:20px; } p { font-size:16px; } .button { font-size:15px; padding:14px; } }
-  </style>
+  <meta name="description" content="Koi pond records, water trends, care history and cautious AI guidance on iPhone, iPad, Android and web." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Koi Companion" />
+  <meta property="og:title" content="Koi Companion — clearer pond care starts with better records" />
+  <meta property="og:description" content="Start with a free Basic account, including 10 complimentary typed AI questions each month. No free trial and no automatic subscription." />
+  <meta property="og:url" content="https://koicompanion.app/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#062f3a" />
+  <title>Koi Companion | Koi pond records and guidance</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
-  <main class="page">
-    <nav aria-label="Main navigation"><a href="/" aria-current="page">Home</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a><a href="/support/">Support</a></nav>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Koi Companion home">Koi Companion</a>
+      <nav aria-label="Main navigation">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
     <section class="hero">
-      <div class="badge">Available now on iPhone, iPad, Android and web</div>
-      <h1>Koi Companion</h1>
-      <p>Keep pond records, koi records, water tests, health notes, treatments, reminders and reports together in one clear, connected place.</p>
-      <div class="platforms">
-        <article class="platform"><h2>iPhone or iPad</h2><p>Download Koi Companion from the Apple App Store.</p><a class="button" href="https://apps.apple.com/gb/app/koi-companion/id6769457805">Download on the App Store</a></article>
-        <article class="platform"><h2>Android</h2><p>Install Koi Companion from Google Play and keep your pond information with you.</p><a class="button" href="https://play.google.com/store/apps/details?id=uk.co.koicompanion.app">Get it on Google Play</a></article>
-        <article class="platform desktop-only"><h2>Computer</h2><p>Prefer your desktop or laptop? Use Koi Companion in your browser.</p><a class="button" href="https://app.koicompanion.app/">Open in your browser</a></article>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Available on iPhone, iPad, Android and web</p>
+          <h1>Better records.<br />Calmer koi keeping.</h1>
+          <p class="hero-copy">Keep ponds, koi, water tests, health notes, treatments, reminders and reports together, with cautious AI guidance when you need it.</p>
+          <div class="trust-row" aria-label="Basic plan summary">
+            <span>Free Basic account</span>
+            <span>10 typed AI questions each month</span>
+            <span>No payment details</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button" href="https://app.koicompanion.app/account/sign-up?utm_source=koicompanion.app&amp;utm_medium=owned_web&amp;utm_campaign=organic_growth">Create a free Basic account</a>
+            <a class="button secondary" href="#download">Choose your device</a>
+          </div>
+          <p class="small-note"><strong>No free trial.</strong> No subscription starts automatically. Intermediate and Premium are optional paid plans.</p>
+        </div>
+
+        <aside class="record-card" aria-label="What Koi Companion keeps together">
+          <p class="record-card-label">Your pond at a glance</p>
+          <div class="record-stat"><span>Water history</span><strong>Trends, not guesswork</strong></div>
+          <div class="record-stat"><span>Koi care</span><strong>Notes, photos and treatments</strong></div>
+          <div class="record-stat"><span>Next steps</span><strong>Reminders and reports</strong></div>
+          <div class="record-stat"><span>Ask Companion</span><strong>General guidance, not diagnosis</strong></div>
+        </aside>
       </div>
-      <p class="support-link">Need help? <a href="/support/">Visit Koi Companion Support</a>.</p>
     </section>
-    <section class="info"><h2>About Koi Companion</h2><p>Koi Companion helps koi keepers manage pond records, koi records, water tests, health notes, treatments, reminders and reports.</p><p>Koi Companion provides record support and guidance. It is not a veterinary diagnosis service.</p></section>
-    <footer>© 2026 West Coast Aerial Ltd · Koi Companion · <a href="mailto:koicompanion@gmail.com">koicompanion@gmail.com</a></footer>
+
+    <section class="section" aria-labelledby="why-heading">
+      <div class="wrap">
+        <p class="eyebrow">Built for everyday pond care</p>
+        <h2 id="why-heading">Everything important, in one place</h2>
+        <div class="feature-grid">
+          <article class="feature-card"><h3>See what changed</h3><p>Record water tests and review recent readings, maintenance and treatment history together.</p></article>
+          <article class="feature-card"><h3>Keep each koi’s story</h3><p>Save profiles, measurements, observations, health cases, photographs and movements.</p></article>
+          <article class="feature-card"><h3>Act with context</h3><p>Use reminders, calculators, reports and cautious AI guidance based on the information you choose.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" aria-labelledby="basic-heading">
+      <div class="wrap split-panel">
+        <div>
+          <p class="eyebrow">Start free and stay in control</p>
+          <h2 id="basic-heading">Basic includes a complimentary AI allowance</h2>
+          <p>Every signed-in Basic account includes 10 typed Koi Companion AI questions per calendar month. The allowance resets on the first of the month and unused questions do not carry over.</p>
+          <p>Photo, microscope and video analysis require an Intermediate or Premium plan, or optional AI credits. AI gives general decision support and does not replace an aquatic vet or experienced koi-health professional.</p>
+        </div>
+        <ul class="check-list">
+          <li>Free Basic record keeping</li>
+          <li>10 typed AI questions each month</li>
+          <li>No card required to create an account</li>
+          <li>No trial and no automatic subscription</li>
+          <li>Optional paid upgrades only when you choose</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="download" aria-labelledby="download-heading">
+      <div class="wrap">
+        <p class="eyebrow">Use it your way</p>
+        <h2 id="download-heading">Open Koi Companion</h2>
+        <div class="platforms">
+          <article class="platform">
+            <h3>iPhone or iPad</h3>
+            <p>Download Koi Companion from the Apple App Store.</p>
+            <a class="button" href="https://apps.apple.com/gb/app/koi-companion/id6769457805">Download on the App Store</a>
+          </article>
+          <article class="platform">
+            <h3>Android</h3>
+            <p>Install Koi Companion from Google Play.</p>
+            <a class="button" href="https://play.google.com/store/apps/details?id=uk.co.koicompanion.app">Get it on Google Play</a>
+          </article>
+          <article class="platform">
+            <h3>Computer</h3>
+            <p>Use Koi Companion from a desktop or laptop browser.</p>
+            <a class="button" href="https://app.koicompanion.app/">Open the web app</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section share-section" aria-labelledby="share-heading">
+      <div class="wrap share-panel">
+        <div>
+          <p class="eyebrow">Help another koi keeper</p>
+          <h2 id="share-heading">Know someone who would find this useful?</h2>
+          <p>Share Koi Companion with a friend, club or koi-keeping group. Every useful share helps another keeper find a clearer way to manage their pond.</p>
+        </div>
+        <button class="button share-button" id="share-button" type="button">Share Koi Companion</button>
+        <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 West Coast Aerial Ltd · Koi Companion</span>
+      <span><a href="mailto:koicompanion@gmail.com">koicompanion@gmail.com</a> · <a href="/support/">Support</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const button = document.getElementById("share-button");
+      const status = document.getElementById("share-status");
+      const shareData = {
+        title: "Koi Companion",
+        text: "Keep koi, pond, water and care records together. Basic is free and includes 10 typed AI questions each month — no free trial or automatic subscription.",
+        url: "https://koicompanion.app/"
+      };
+
+      button?.addEventListener("click", async () => {
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+            status.textContent = "Thanks for sharing Koi Companion.";
+            return;
+          }
+          await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`);
+          status.textContent = "Share text copied — paste it into your post or message.";
+        } catch (error) {
+          if (error && error.name === "AbortError") return;
+          status.textContent = "Copy this link to share: koicompanion.app";
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
